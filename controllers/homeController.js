@@ -7,4 +7,3 @@ exports.getHome = async (req, res) => {
   const popularItems = await Order.getPopularItems();
   res.render('index', { title: 'Campus Eats', restaurants, stats, popularItems });
 };
-

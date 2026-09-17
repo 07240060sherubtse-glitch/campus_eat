@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Body parsing middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.json());
 
 // Routes
 const indexRoutes = require('./routes/index');
@@ -28,3 +29,5 @@ app.listen(PORT, () => {
 });
 
 
+const apiRoutes = require('./routes/api');
+app.use('/api', apiRoutes);
